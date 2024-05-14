@@ -1,0 +1,88 @@
+header {
+    .top__bar {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        background: $black;
+        width: 100%;
+        height: 3em;
+        float: left;
+        color: $white;
+        .container-fluid {
+            transition: all .5s ease-out .5s;
+        }
+        li {
+            display: inline-block;
+            font-size: .9em;
+            margin-right: 1em;
+        }
+    }
+    .left__part {
+        span {
+            display: flex;
+            align-items: center;
+            .ico {
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                margin-right: .5em;
+            }
+            $icons: mail phone clock;
+            @each $icon in $icons {
+                .ico-#{$icon} {
+                    background-image: url(../images/svgs/ico-#{$icon}.svg);
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    &.fixed__header {
+        .top__bar {
+            .container-fluid {
+                opacity: 0;
+                ;
+            }
+            //  height: 0;
+            //  opacity: 0;
+        }
+    }
+}
+
+.main__bar {
+    position: fixed;
+    top: 58px;
+    z-index: 11;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    transition: top .4s ease-out .4s;
+    .logo {
+        height: 80px;
+        transition: all .3s ease-out .3s;
+        img {
+            height: 100%;
+        }
+    }
+    .menu {
+        li {
+            display: inline-block;
+            color: $white;
+            margin-right: 1.5em;
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.fixed__header {
+    .main__bar {
+        top: 0;
+        //background: $black-light;
+        .logo {
+            height: 50px;
+        }
+    }
+}

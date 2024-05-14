@@ -1,0 +1,18 @@
+//Main Style
+@import "bootstrap/functions";
+@import "customVariables";
+@import "bootstrap/bootstrap.scss";
+@import "plugins/flexslider";
+@import "plugins/lightslider";
+@import "plugins/hover";
+@import "plugins/animate";
+@import "plugins/slick";
+@import "plugins/slick-theme";
+
+/* Custom */
+
+@import "functions";
+@import "global";
+@import "header";
+@import "footer";
+@import "home";
